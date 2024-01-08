@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .gridContainer {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ccc;
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+        /* Grid */
+
+        .gridContainer {
+            display: grid;
+            /*grid-template-columns: repeat(3, 1fr);*/
+            /*grid-template-rows: 75px 50px 1fr 50px;*/
+            gap: 1em;
+
+            /* Para fazer da primeira forma, utilizamos o grid-template-areas para dar nome as areas que vamos ter no site.
+            Observação: 
+            - a quantidade de nomes varia de acordo com a quantidade de colunas que terá no site
+            - se quiser colocar espaços vazios você pode adicionar uma palavra diferente das escolhidas, mas de preferência adicionar um . no lugar que quer que fique vazio, da seguinte forma: 
+            grid-template-areas: 
+            "header header ."
+            "nav nav aside"
+            "main . aside"
+            "footer footer ."
+
+            Se em vez de ponto ou um nome diferente você deixar o local vazio, o seu código vai quebrar.
+             */
+            /*grid-template-areas: 
+            "header header header"
+            "nav nav aside"
+            "main main aside"
+            "footer footer footer"
+            ;
+            */
+            
+            /* também podemos fazer utilizando shorthand (proprieades abreviadas) dessa forma: */
+
+            grid-template: 
+            "header header header" 75px
+            "nav nav ." 50px
+            "main main aside" 1fr
+            "footer footer aside" 50px
+            / 1fr 1fr 1fr
+            ;
+        }
+
+        /* Primeira forma de organizar o site com CSS Grid usando a tag grid area */
+
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        /* Segunda forma de fazer com CSS Grid
+
+        .header {
+            grid-column: 1 / -1;
+
+        }
+
+        .nav {
+            grid-column: 1 / -2;
+        }
+
+        .aside {
+            grid-row: 2 / -1;
+            grid-column: 3 / -1;
+
+            /* A propriedade Z-index vem com o valor de 0, mas se a gente quiser mudar a ordem de uma tag, para ficar por cima da outra usamos ele e colocamos um valor. 
+            z-index: 1;
+        }
+
+        .main {
+            grid-column: 1 / 3;
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+            grid-row: 4 / 5;
+        }
+
+        .gridItem {
+            outline: 2px solid black;
+        }
+        */
+
+        
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="gridContainer">
+        <header class="header gridItem">Header</header>
+        <nav class="nav gridItem">Nav</nav>
+        <aside class="aside gridItem">Aside</aside>
+        <main class="main gridItem">
+            main
+        </main>
+        <footer class="footer gridItem">Footer</footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip path</title>
+    <style>
+html {
+    font-size: 62,5%;
+}
+body {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    background-color: aqua;
+    margin: 2em;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 48px;
+}
+.card {
+    width: 300px;
+    background-color: white;
+    padding: 40px 30px 30px 50px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 1.5625rem;
+}
+
+.conteudo__card{
+    text-align: center;
+}
+
+.card__title {
+    margin: 0;
+}
+
+.card:hover {
+    transform: rotate(0);
+    transition: 1s;
+
+}
+    
+
+.card::before {
+    content: "";
+    display: block;
+    width: 47px;
+    height: 43.6px;
+    position: absolute;
+    top: 0;
+    left: 0;}
+
+    .exemplo {
+        width: 30px;
+        height: 30px;
+        background-color: yellow;
+        border-top: 15px solid black;
+        border-right: 15px solid white ;
+    }
+
+    </style>
+</head>
+<body>
+    <article class="card conteudo__card">
+        <h2 class="card__title" >Lorem ipsum dolor</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem eum ullam aliquid consequatur corrupti facere!</p>
+    </article>
+    <div class="exemplo"></div>
+</body>
+</html>

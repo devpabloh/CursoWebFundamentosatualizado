@@ -1,0 +1,32 @@
+@charset "UTF-8";
+html {
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400px;
+    /* shorthand --> font: 400 62.5% 'Inter', sans-serif; */
+}
+.wrappercontainer-dark {
+    background-color: #162028;
+    color: #425564;
+}
+.container {
+    max-width: 127.6rem;
+    margin: auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.header-lista a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+}
+.lista ul {
+    display: flex;
+    gap: .6rem;
+    list-style-type: none;
+}
+

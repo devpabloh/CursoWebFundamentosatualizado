@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes</title>
+    <style>
+        .switch {
+            --switch-color: #cfd8dc;
+        }
+
+        .switch span{
+           display: inline-block; 
+           width: 2em;
+           height: 1em;
+           border-radius: 1em;
+           outline: 2px solid var(--switch-color);
+        }
+        
+        .switch span::after{
+            content: "";
+            display: block;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkbox</h1>
+    <label for="switch">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+
+    <label for="switch">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label for="switch">
+        <input type="checkbox">
+        <span></span>
+        JavaScript
+    </label>
+
+</body>
+</html>
+

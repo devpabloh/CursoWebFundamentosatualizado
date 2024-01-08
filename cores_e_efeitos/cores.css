@@ -1,0 +1,91 @@
+@charset "UTF-8";
+:root {
+    --primary-color: #e10f0f;
+
+}
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient( to top, white);
+    background-attachment: fixed;
+}
+h1 {text-align: center;}
+.cores {
+    background-color: color-mix(in srgb, var(--primary-color), transparent);
+    width: 80%;
+    border: 8px dashed black;
+    margin: 20px auto;
+    padding: 26px;
+}
+
+.cores p {
+    margin: 0;
+}
+
+section {
+    counter-reset: contador;
+}
+.cores {
+    counter-increment: contador;
+}
+
+.cores::before {
+    content: counter(contador);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cores:nth-of-type(2) {
+    background-color: red;
+    background-clip: content-box;
+}
+
+.cores:nth-of-type(3) {
+    background-color: hsl(90deg, 100%, 50%);
+    background-clip: border-box;
+}
+
+.cores:nth-of-type(4) {
+    background-image:linear-gradient(70deg,blue,transparent), linear-gradient(to bottom, red, transparent);
+    background-clip: content-box, padding-box;
+}
+.cores:nth-of-type(5) {
+    background-image: radial-gradient(blue, red, green 50%, yellow);
+}
+
+.cores:nth-of-type(6) {
+    background-image: radial-gradient(circle, blue 30%, #f008, green 50%, yellow);
+}
+
+.cores:nth-of-type(7) {
+    background-image: radial-gradient(circle at left top, blue, #f008);
+}
+
+.cores:nth-of-type(8) {
+    background-image: radial-gradient(circle at 10% 50%, blue, #f008 20%);
+}
+
+.cores:nth-of-type(9) {
+    background-image: conic-gradient( from 45deg, blue, green, red);
+    filter: blur(10px);
+}
+.cores:nth-of-type(10) {
+    background-image: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f);
+    transition: 5s linear;
+}
+
+.cores:nth-of-type(10):hover {
+    filter: hue-rotate(4turn);
+}
+
+.cores:nth-of-type(11) {
+    box-shadow:10px 10px 6px rgba(0, 0, 0, 0.8);
+}
+
+.cores:nth-of-type(12){
+    filter: drop-shadow(3px 3px 2px rgba(0,0,0,.8));
+}
+
+.cores:nth-of-type(13){
+    background-image: linear-gradient(to top right, transparent 50%, red 50%);
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .8));
+}
